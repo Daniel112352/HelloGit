@@ -1,0 +1,29 @@
+/*
+ * 1 - Construir um programa para mostrar a data do sistema escrita por extenso usando as classes discutidas e testando as demais formas, como por exemplo: 
+Hoje é quinta-feira, dia 30 de março de 2023 e agora são 20 horas e 32 minutos.
+Deve ser construída uma classe e um método para retornar a data nesse formato.
+
+ */
+
+package aula_30_03;
+
+import java.text.DateFormat;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+
+public class Ex1_data {
+
+	public static void main(String[] args) {
+
+		DateFormat df1 = DateFormat.getDateInstance(DateFormat.FULL);
+		
+		SimpleDateFormat hora = new SimpleDateFormat("HH");
+		SimpleDateFormat min = new SimpleDateFormat("mm");
+		
+		Date data= new Date();
+		
+		System.out.println("Hoje é " + df1.format(data) + " e agora são " + hora.format(data) + " horas e " + min.format(data) + " minutos." );
+		
+		
+	}
